@@ -23,7 +23,7 @@ const { createApp } = Vue
     data() {
       
       return {
-          tasks: [
+        tasks: [
             {text: 'Learn HTML', 
             done: true
             },
@@ -45,13 +45,28 @@ const { createApp } = Vue
             {text: 'Learn Laravel', 
             done: false
             },
-        ]
+        ], 
+        newTask: "",
+        error: ""
       }
     }, 
     methods: {
         remove(i) {
             this.tasks.splice(i, 1)
-        }
+        }, 
+        addTask() {
+            if (this.newTask.length >= 2) {
+                this.tasks.unshift(
+                    {
+                        text: this.newTask, 
+                        done: false,
+                    }
+                );
+                this.newTask = ""
+            } else {
+                this.error = "The length of the task had to be at leats 2 characters"
+            }
+        }, 
 
     }
   }).mount('#app')

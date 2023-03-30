@@ -20,6 +20,13 @@
                 </li>
                
             </ul>
+            <div class="add">
+                <input type="text" v-model="newTask">
+                <button class="btn btn-primary" @click="addTask ()">Add</button>
+            </div>
+            <div class="alert alert-primary" role="alert" v-if="error">
+                <strong>{{error}}</strong>
+            </div>
         </div>
     </div>
 </div>
