@@ -2,6 +2,7 @@
 // Rifare l'esercizio della to do list. Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
 // text, una stringa che indica il testo del todo
 // done, un booleano (true/false) che indica se il todo è stato fatto oppure no
+
 // MILESTONE 1
 // Stampare all'interno di una lista HTML un item per ogni todo. Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
 // MILESTONE 2
@@ -13,11 +14,33 @@
 // cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 
 
-
 const { createApp } = Vue
 
   createApp({
     data() {
+        tasks: [
+            {text: 'Learn HTML', 
+            done: true
+            },
+             {text: 'Learn CSS', 
+            done: true
+            },
+            {text: 'Learn Bootstrap', 
+            done: true
+            },
+            {text: 'Learn JS', 
+            done: true
+            },
+            {text: 'Learn Vue JS', 
+            done: false
+            },
+            {text: 'Learn PHP', 
+            done: false
+            },
+            {text: 'Learn Laravel', 
+            done: false
+            },
+        ]
       return {
         message: 'Hello Vue!'
       }
