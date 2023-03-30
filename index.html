@@ -21,7 +21,7 @@
                
             </ul>
             <div class="add">
-                <input type="text" v-model="newTask">
+                <input type="text" v-model="newTask"  @keyup.enter="addTask()">
                 <button class="btn btn-primary" @click="addTask ()">Add</button>
             </div>
             <div class="alert alert-primary" role="alert" v-if="error">
