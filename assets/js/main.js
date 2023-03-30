@@ -47,11 +47,13 @@ const { createApp } = Vue
             },
         ], 
         newTask: "",
-        error: ""
+        error: "", 
+        completed: [],
       }
     }, 
     methods: {
         remove(i) {
+            this.completed.push(this.tasks[i])
             this.tasks.splice(i, 1)
         }, 
         addTask() {
@@ -69,7 +71,8 @@ const { createApp } = Vue
         }, 
         changeStatus(i) {
            this.tasks[i].done = !this.tasks[i].done
-        }
+        },
+          
 
     }
   }).mount('#app')
