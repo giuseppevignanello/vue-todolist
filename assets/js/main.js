@@ -67,6 +67,9 @@ const { createApp } = Vue
                 this.error = "The length of the task had to be at leats 2 characters"
             }
         }, 
+        changeStatus(i) {
+           this.tasks[i].done = !this.tasks[i].done
+        }
 
     }
   }).mount('#app')

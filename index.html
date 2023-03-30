@@ -14,8 +14,8 @@
     <div class="container">
         <div class="tasks">
             <ul>
-                <li v-for="(task, index) in tasks"  >
-                    <span :class ="task.done ? 'text-decoration-line-through' : ''">{{task.text}}</span>
+                <li v-for="(task, index) in tasks" >
+                    <span @click="changeStatus(index)" :class ="task.done ? 'text-decoration-line-through' : ''">{{task.text}}</span>
                     <span @click="remove(index)">❌</span>
                 </li>
                
